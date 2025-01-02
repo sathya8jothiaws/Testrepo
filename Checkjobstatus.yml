@@ -1,6 +1,7 @@
 ---
-- hosts: 127.0.0.1
-  connection: local
+- 
+ hosts: 127.0.0.1
+ gather_facts: true
  vars:
     tower_api_url: "https://10.42.0.42"
     tower_token: "KTk9rN2osEhAi3FF9dvvdFpXi4l4ai"
