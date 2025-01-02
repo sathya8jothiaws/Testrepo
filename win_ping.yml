@@ -7,7 +7,10 @@
    - name: Example from an Ansible Playbook
      win_ping:
      register : results
-     
+
    - name: Display all cluster names
+     vars:
+       Servername: "{{ansible_host}}"
+       Status: "{{ results | json_query('ping') }}"
      ansible.builtin.debug:
-       msg: "{{ results | json_query('ping') }}"" \n "{{ results|json_query('invocation.module_args.data') }}"
+       msg: "{{Servername}} : {{Status}}"
