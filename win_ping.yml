@@ -1,12 +1,12 @@
 ---
-- hosts: all
--  tasks:
-     - name: Example from an Ansible Playbook
-         win_ping:
-           register: results
-           
-     - name: Print to console
-         debug:
-           msg: "{{results.stdout}}"
+- 
+ hosts: all
+ tasks:
+   - name: Example from an Ansible Playbook
+     win_ping:
+   
+   - name: Print to console
+     debug:
+       msg: "{{results.stdout}}"
      
  
