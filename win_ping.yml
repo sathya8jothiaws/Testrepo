@@ -14,4 +14,4 @@
    - name: Display all cluster names
      ansible.builtin.debug:
        var: item
-     loop: "{{ results | json_query("*") }}"
+     loop: "{{ results | json_query('ping') }}"
