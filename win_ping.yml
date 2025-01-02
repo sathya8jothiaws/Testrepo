@@ -13,4 +13,4 @@
      
    - name: print job_result
      debug:
-       msg: "{{ results |from_json }}"
+       msg: "{{ results |community.general.json_query('ping') }}"
