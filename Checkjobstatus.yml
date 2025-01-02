@@ -23,5 +23,5 @@
    
    - name: print the result
      ansible.builtin.debug:
-       msg: "{{ job_result | json_query('id') }}"
+       msg: "{{ job_result | json_query('json.related.job_events') }}"
    
