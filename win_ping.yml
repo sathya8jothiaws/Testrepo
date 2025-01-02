@@ -5,8 +5,7 @@
  vars:
     tower_api_url: "https://10.42.0.42"
     tower_token: "KTk9rN2osEhAi3FF9dvvdFpXi4l4ai"
-    job_id: 85
-        
+            
  tasks:
    - name: Example from an Ansible Playbook
      win_ping:
@@ -19,7 +18,7 @@
 
    - name: Check that tower job has finished
      uri:
-       url: "{{ tower_api_url }}/api/v2/jobs/{{ job_id }}/"
+       url: "{{ tower_api_url }}/api/v2/jobs/{{ awx_job_id }}/"
        method: GET
        validate_certs: no
        status_code: 201, 200
