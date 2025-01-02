@@ -5,6 +5,7 @@
  vars:
     tower_api_url: "https://10.42.0.42"
     tower_token: "KTk9rN2osEhAi3FF9dvvdFpXi4l4ai"
+    job_id: 85
         
  tasks:
    - name: Example from an Ansible Playbook
