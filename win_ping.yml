@@ -25,5 +25,5 @@
        ignore_errors: true
 
    - name: print job_result
-       debug:
-         msg: "{{ job_result['summary_fields'] }}"
+     debug:
+       msg: "{{ job_result['summary_fields'] }}"
