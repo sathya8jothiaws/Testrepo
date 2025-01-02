@@ -20,6 +20,6 @@
      ignore_errors: true
    
    - name: print the result
-       debug:
-         msg: "{{ job_result | json_query('id') }}"
+     ansible.builtin.debug:
+       msg: "{{ job_result | json_query('id') }}"
    
