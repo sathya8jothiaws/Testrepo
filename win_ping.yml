@@ -14,3 +14,6 @@
    - name: print job_result
      debug:
        msg: "{{ results || from_json | json_query('ping') }}"
+
+   - debug: var=results
+   - set_fact: myvar="{{ results.stdout | from_json }}"
