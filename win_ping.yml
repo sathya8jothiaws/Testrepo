@@ -8,6 +8,6 @@
         
    - name: Print to console
      debug:
-       msg: "{{results.stdout}}"
+       msg: "{{results}}"
      
  
