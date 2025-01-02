@@ -5,9 +5,9 @@
    - name: Example from an Ansible Playbook
      win_ping:
      register : results
-        
-   - name: Print to console
-     debug:
-       msg: "{{results}}"
      
+   - name: Print return information from the previous task
+     ansible.builtin.debug:
+       var: results
+       verbosity: 2
  
