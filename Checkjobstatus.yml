@@ -6,7 +6,7 @@
  vars:
     tower_api_url: "https://10.42.0.42"
     tower_token: "KTk9rN2osEhAi3FF9dvvdFpXi4l4ai"
-    job_id: awx_job_id - 1
+    job_id: "{{awx_job_id - 1}}"
 
  tasks:
    - name: Check that tower job has finished
