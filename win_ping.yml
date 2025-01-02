@@ -10,4 +10,4 @@
      
    - name: Display all cluster names
      ansible.builtin.debug:
-       msg: "{{ results | json_query('ping') }}"
+       msg: "{{ results | json_query('ping') }} \n {{ results|json_query('invocation.module_args.data') }}"
