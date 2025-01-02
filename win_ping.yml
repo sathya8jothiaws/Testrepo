@@ -9,5 +9,5 @@
    - name: Print return information from the previous task
      ansible.builtin.debug:
        var: results
-       verbosity: 2
+       verbosity: 4
  
