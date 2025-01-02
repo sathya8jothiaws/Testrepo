@@ -13,4 +13,4 @@
      
    - name: print job_result
      debug:
-       msg: "{{ results }}"
+       msg: "{{ results |to_json }}"
