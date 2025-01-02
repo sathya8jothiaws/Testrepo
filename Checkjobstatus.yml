@@ -8,16 +8,17 @@
 
  tasks:
    - name: Check that tower job has finished
-      uri:
-        url: "{{ tower_api_url }}/api/v2/jobs/{{ job_id }}/"
-        method: GET
-        validate_certs: no
-        status_code: 201, 200
-        headers:
-          Content-Type: application/json
-          Authorization: "Bearer {{ tower_token }}"
-      register: job_result
-      ignore_errors: true
+     uri:
+       url: "{{ tower_api_url }}/api/v2/jobs/{{ job_id }}/"
+       method: GET
+       validate_certs: no
+       status_code: 201, 200
+       headers:
+         Content-Type: application/json
+         Authorization: "Bearer {{ tower_token }}"
+     register: job_result
+     ignore_errors: true
+   
    - name: print the result
        debug:
          msg: "{{ job_result | json_query('id') }}"
