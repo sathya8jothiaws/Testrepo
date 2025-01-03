@@ -29,7 +29,7 @@
          
      ansible.builtin.debug:
        msg: 
-       - "TemplateName: {{ TemplateName }}\n"
-       - "Org: {{ organization}}\n"
-       - "JobStatus: {{Jobstatus}}\n"
+       - "TemplateName: {{ TemplateName }}"
+       - "Org: {{ organization}}"
+       - "JobStatus: {{Jobstatus}}"
    
