@@ -28,5 +28,8 @@
          organization: "{{ job_result['json']['summary_fields']['organization']['name'] }}" 
          Jobstatus: "{{ job_result['json']['status']}}" 
             
-       msg: "TemplateName: {{ TemplateName }}"\n "Org: {{ organization}}" \n "JobStatus: {{Jobstatus}}"
+       msg: 
+        - "TemplateName: {{ TemplateName }}"
+        - "Org: {{ organization}}"
+        - "JobStatus: {{Jobstatus}}"
    
