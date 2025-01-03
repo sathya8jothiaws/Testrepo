@@ -13,4 +13,4 @@
        Servername: "{{ansible_host}}"
        Status: "{{ results | to_yaml }}"
      ansible.builtin.debug:
-       msg: "{{Servername}} : {{Status[0]}}"
+       msg: "{{Servername}} : {{Status.ping}}"
