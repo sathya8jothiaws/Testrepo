@@ -8,9 +8,9 @@
      win_ping:
      register : results
 
-   - name: Display all cluster names
+   - name: Display values
      vars:
        Servername: "{{ansible_host}}"
-       Status: "{{ results | to_yaml }}"
+       Status: "{{ (results | | list) }}"
      ansible.builtin.debug:
-       msg: "{{Servername}} : {{Status.ping}}"
+       msg: "{{Servername}} : {{Status}}"
