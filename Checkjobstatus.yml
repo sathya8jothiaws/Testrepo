@@ -22,14 +22,14 @@
      ignore_errors: true
    
    - name: print the result
+     vars:
+       TemplateName: "{{ job_result['json']['summary_fields']['job_template']['name'] }}"
+       organization: "{{ job_result['json']['summary_fields']['organization']['name'] }}" 
+       Jobstatus: "{{ job_result['json']['status']}}" 
+         
      ansible.builtin.debug:
-       vars:
-         TemplateName: "{{ job_result['json']['summary_fields']['job_template']['name'] }}"
-         organization: "{{ job_result['json']['summary_fields']['organization']['name'] }}" 
-         Jobstatus: "{{ job_result['json']['status']}}" 
-            
        msg: 
-        - "TemplateName: {{ TemplateName }}"
-        - "Org: {{ organization}}"
-        - "JobStatus: {{Jobstatus}}"
+       - "TemplateName: {{ TemplateName }}\n"
+       - "Org: {{ organization}}\n"
+       - "JobStatus: {{Jobstatus}}\n"
    
