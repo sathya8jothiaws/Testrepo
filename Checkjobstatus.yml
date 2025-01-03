@@ -23,5 +23,5 @@
    
    - name: print the result
      ansible.builtin.debug:
-       msg: "{{ job_result['json']['related']['summary_fields'] }}"
+       msg: "{{ job_result['json']['related'] }}"
    
