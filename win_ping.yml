@@ -11,6 +11,6 @@
    - name: Display values
      vars:
        Servername: "{{ansible_host}}"
-       Status: "{{ (results |to_yaml| list) }}"
+       Status: "{{ (results |items2dict) }}"
      ansible.builtin.debug:
        msg: "{{Servername}} : {{Status}}"
