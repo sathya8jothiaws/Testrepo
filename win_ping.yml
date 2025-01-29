@@ -22,5 +22,5 @@
        msg:
         - "{{ listone }}"
         - "{{ listtwo }}"
-        - "{{ listone[listtwo].remove()  }}"
+        - "{{ listone| reject('equalto', '2') | list }}"
        
