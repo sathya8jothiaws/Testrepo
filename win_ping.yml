@@ -22,5 +22,5 @@
        msg:
         - "{{ listone }}"
         - "{{ listtwo }}"
-        - "{{ listone|  reject('search',listtwo) | list }}"
+        - "{{ listone|string| reject('search',listtwo) | list }}"
        
