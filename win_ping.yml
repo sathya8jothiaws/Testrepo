@@ -20,5 +20,5 @@
        listtwo: 2
    - debug:
        msg:
-        "{{ listone.remove(listtwo) }}"
+        "{{ listone }}"
        
