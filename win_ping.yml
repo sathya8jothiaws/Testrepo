@@ -21,6 +21,6 @@
    - debug:
        msg:
         - "{{ listone }}"
-        - "{{ listtwo|string }}"
-        - "{{ listone| difference(listtwo) }}"
+        - "{{ listtwo }}"
+        - "{{ listone| difference("listtwo") }}"
        
