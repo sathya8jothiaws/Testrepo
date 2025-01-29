@@ -21,6 +21,6 @@
    - debug:
        msg:
         "{{ listone }}"
-        "{{listtwo}}"
-        "{{ listone| reject('search',listtwo}}"
+        "{{ listtwo }}"
+        "{{ listone| reject('search',listtwo) }}"
        
