@@ -17,7 +17,7 @@
    - name: test list comparisions.
      set_fact:
        listone: [1,2,3]
-       listtwo: 2
+       listtwo: 3
    - debug:
        msg:
         - "{{ listone }}"
