@@ -18,7 +18,7 @@
      set_fact:
        listone: [1,2,3]
        listtwo: [2]
-       listone: {{listone|difference(listtwo)|list}}
+       listone: "{{listone|difference(listtwo)|list}}"
    - name: output
      debug: 
        msg: "{{listone}}"
