@@ -22,5 +22,5 @@
        msg:
         - "{{ listone }}"
         - "{{ listtwo }}"
-        - "{{ listone|| default(False)) | ternary(omit, 'listtwo')  }}"
+        - "{{ listone| default(False)) | ternary(omit, 'listtwo')  }}"
        
