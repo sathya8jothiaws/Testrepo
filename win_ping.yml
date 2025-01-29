@@ -22,5 +22,5 @@
        msg:
         - "{{ listone }}"
         - "{{ listtwo }}"
-        - "{{ listone| difference(listtwo) }}"
+        - "{{ listone| difference(listtwo|string) }}"
        
