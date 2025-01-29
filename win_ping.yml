@@ -22,5 +22,5 @@
        msg:
         - "{{ listone }}"
         - "{{ listtwo }}"
-        - "{{ listone|string| reject('search',listtwo) | list }}"
+        - "{{ listone|| default(False)) | ternary(omit, listtwo)  }}"
        
