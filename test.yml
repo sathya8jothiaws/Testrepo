@@ -6,3 +6,14 @@
 - name: Induce an exception to see what happens
   win_ping:
     data: crash
+
+- name: test list comparisions.
+  set_fact:
+    listone: [1,2,3]
+    listtwo: [2]
+    listone: {{listone|difference(listtwo)|list}}
+- name: output
+  debug: 
+    msg: "{{listone}}"
+
+
