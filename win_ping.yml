@@ -17,8 +17,8 @@
    - name: test list comparisions.
      set_fact:
        listone: [1,2,3]
-       listtwo: [2]
-       listone: "{{listone|difference(listtwo)|list}}"
-   - name: output
-     debug: 
-       msg: "{{listone}}"
+       listtwo: 2
+   - debug:
+       msg:
+        {{ listone.remove(listtwo) }}
+       
