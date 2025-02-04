@@ -16,6 +16,5 @@
        msg: "{{Servername}} : {{Status}}"
 
    - debug:
-       msg: "{{emaillist}}"
        msg: "{{emaillist|replace('\n',',')}}"
        
