@@ -14,13 +14,8 @@
        Status: "{{ (results['ping']) }}"
      ansible.builtin.debug:
        msg: "{{Servername}} : {{Status}}"
-   - name: test list comparisions.
-     set_fact:
-       listone: [1,2,3]
-       listtwo: 3
+
    - debug:
-       msg:
-        - "{{ listone }}"
-        - "{{ listtwo }}"
-        - "{{ listone| reject('equalto', listtwo) | list }}"
+       msg: "{{emaillist}}"
+       msg: "{{emaillist|replace('\n',',')}}"
        
